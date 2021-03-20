@@ -1,0 +1,40 @@
+{
+  "name": "@ndjson-utils/sqlite",
+  "version": "0.1.0",
+  "description": "Stream ndjson to and from sqlite",
+  "author": "idris-maps",
+  "license": "GPLv2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "ava",
+    "build": "tsc",
+    "test:verbose": "ava --verbose"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idris-maps/ndjson-utils.git"
+  },
+  "homepage": "https://github.com/idris-maps/ndjson-utils/tree/master/packages/sqlite",
+  "publishConfig": {
+    "access": "public"
+  }
+}
