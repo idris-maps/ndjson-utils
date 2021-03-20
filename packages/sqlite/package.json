@@ -1,8 +1,12 @@
 {
   "name": "@ndjson-utils/sqlite",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Stream ndjson to and from sqlite",
-  "keywords": ["ndjson", "sqlite", "cli"],
+  "keywords": [
+    "ndjson",
+    "sqlite",
+    "cli"
+  ],
   "author": "idris-maps",
   "license": "GPLv2",
   "bin": {
