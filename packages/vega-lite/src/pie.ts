@@ -3,7 +3,7 @@ import { TopLevelSpec } from 'vega-lite'
 import logSpec from './logSpec'
 
 const parser = new ArgumentParser({
-  description: 'Create a bar chart from JSON or NDJSON',
+  description: 'Create a pie chart from JSON or NDJSON',
 })
 
 parser.add_argument('-l', '--label', { help: 'Label key (defaults to "label")' })

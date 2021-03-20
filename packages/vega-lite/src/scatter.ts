@@ -3,7 +3,7 @@ import { TopLevelSpec } from 'vega-lite'
 import logSpec from './logSpec'
 
 const parser = new ArgumentParser({
-  description: 'Create a bar chart from JSON or NDJSON',
+  description: 'Create a scatterplot from JSON or NDJSON',
 })
 
 parser.add_argument('-x', { help: 'X axis key (defaults to "x")' })

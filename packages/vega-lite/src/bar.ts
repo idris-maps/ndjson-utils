@@ -6,8 +6,8 @@ const parser = new ArgumentParser({
   description: 'Create a bar chart from JSON or NDJSON',
 })
 
-parser.add_argument('-x', { help: 'X axis key (defaults to "label")' })
-parser.add_argument('-y', { help: 'Y axis key (defaults to "value")' })
+parser.add_argument('-l', '--label', { help: 'X axis key (defaults to "label")' })
+parser.add_argument('-v', '--value', { help: 'Y axis key (defaults to "value")' })
 parser.add_argument('-W', '--width', { help: 'Chart width (defaults to "400")' })
 parser.add_argument('-H', '--height', { help: 'Chart height (defaults to "200")' })
 parser.add_argument('-n', '--ndjson', { help: 'Takes a NDJSON stream (defaults to JSON)' })
@@ -15,15 +15,15 @@ parser.add_argument('-n', '--ndjson', { help: 'Takes a NDJSON stream (defaults t
 const args = parser.parse_args()
 
 interface Config {
-  x: string
-  y: string
+  label: string
+  value: string
   width: string
   height: string
 }
 
 const config: Config = {
-  x: args.x || 'label',
-  y: args.y || 'value',
+  label: args.label || 'label',
+  value: args.value || 'value',
   width: args.width || '400',
   height: args.height || '200',
 }
@@ -37,8 +37,8 @@ const getSpec = (data: any): TopLevelSpec => ({
   },
   "mark": "bar",
   "encoding": {
-    "x": {"field": config.x, "type": "ordinal" },
-    "y": {"field": config.y, "type": "quantitative"},
+    "x": {"field": config.label, "type": "ordinal" },
+    "y": {"field": config.value, "type": "quantitative"},
   }
 })
 
