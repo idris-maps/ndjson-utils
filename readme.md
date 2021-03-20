@@ -6,6 +6,10 @@ Utilities to deal with `ndjson` files
 
 Add/extract `ndjson` to/from `sqlite`
 
+## [@ndjson-utils/transform](https://github.com/idris-maps/ndjson-utils/tree/master/packages/transform)
+
+Functions to transform ndjson streams
+
 ## [@ndjson-utils/vega-lite](https://github.com/idris-maps/ndjson-utils/tree/master/packages/vega-lite)
 
 Create `vega-lite` spec and generate charts from `ndjson`
