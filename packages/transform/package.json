@@ -1,0 +1,60 @@
+{
+  "name": "@ndjson-utils/transform",
+  "version": "0.0.3",
+  "description": "Transform ndjson streams",
+  "keywords": [
+    "ndjson",
+    "transform",
+    "cli"
+  ],
+  "author": "idris-maps",
+  "license": "GPLv2",
+  "bin": {
+    "count": "dist/count.js",
+    "filter": "dist/filter.js",
+    "group": "dist/group.js",
+    "map": "dist/map.js",
+    "num": "dist/num.js",
+    "omit": "dist/omit.js",
+    "pairs": "dist/pairs.js",
+    "pick": "dist/pick.js",
+    "reduce": "dist/reduce.js",
+    "sum": "dist/sum.js",
+    "uniq": "dist/uniq.js",
+    "values": "dist/values.js"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "bin:count": "sed -i '1i #!/usr/bin/env node' dist/count.js && chmod -x dist/count.js",
+    "bin:filter": "sed -i '1i #!/usr/bin/env node' dist/filter.js && chmod -x dist/filter.js",
+    "bin:group": "sed -i '1i #!/usr/bin/env node' dist/group.js && chmod -x dist/group.js",
+    "bin:map": "sed -i '1i #!/usr/bin/env node' dist/map.js && chmod -x dist/map.js",
+    "bin:num": "sed -i '1i #!/usr/bin/env node' dist/num.js && chmod -x dist/num.js",
+    "bin:omit": "sed -i '1i #!/usr/bin/env node' dist/omit.js && chmod -x dist/omit.js",
+    "bin:pairs": "sed -i '1i #!/usr/bin/env node' dist/pairs.js && chmod -x dist/pairs.js",
+    "bin:pick": "sed -i '1i #!/usr/bin/env node' dist/pick.js && chmod -x dist/pick.js",
+    "bin:reduce": "sed -i '1i #!/usr/bin/env node' dist/reduce.js && chmod -x dist/reduce.js",
+    "bin:sum": "sed -i '1i #!/usr/bin/env node' dist/sum.js && chmod -x dist/sum.js",
+    "bin:uniq": "sed -i '1i #!/usr/bin/env node' dist/uniq.js && chmod -x dist/uniq.js",
+    "bin:values": "sed -i '1i #!/usr/bin/env node' dist/values.js && chmod -x dist/values.js",
+    "bin": "npm run bin:count && npm run bin:filter && npm run bin:group && npm run bin:map && npm run bin:num && npm run bin:omit && npm run bin:pairs && npm run bin:pick && npm run bin:reduce && npm run bin:sum && npm run bin:uniq && npm run bin:values",
+    "build": "tsc && npm run bin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idris-maps/ndjson-utils.git"
+  },
+  "homepage": "https://github.com/idris-maps/transform/tree/master/packages/sqlite",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
