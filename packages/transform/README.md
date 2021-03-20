@@ -1,4 +1,4 @@
-# `transform`
+# @ndjson-utils/transform
 
 A collection of functions to transform a NDJSON stream
 
