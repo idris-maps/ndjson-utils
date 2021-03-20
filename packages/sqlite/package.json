@@ -1,6 +1,6 @@
 {
   "name": "@ndjson-utils/sqlite",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Stream ndjson to and from sqlite",
   "author": "idris-maps",
   "license": "GPLv2",
