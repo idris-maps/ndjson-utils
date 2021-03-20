@@ -1,0 +1,40 @@
+{
+  "name": "@ndjson-utils/vega-lite",
+  "version": "0.0.2",
+  "description": "Create vega-lite spec from json/ndjson",
+  "keywords": [
+    "ndjson",
+    "vega-lite",
+    "cli"
+  ],
+  "author": "idris-maps",
+  "license": "GPLv2",
+  "bin": {
+    "bar": "dist/bar.js"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "bin:bar": "sed -i '1i #!/usr/bin/env node' dist/bar.js && chmod -x dist/bar.js",
+    "build": "tsc && npm run bin:bar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idris-maps/ndjson-utils.git"
+  },
+  "homepage": "https://github.com/idris-maps/ndjson-utils/tree/master/packages/sqlite",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/argparse": "^2.0.5",
+    "vega-lite": "^5.0.0"
+  },
+  "dependencies": {
+    "argparse": "^2.0.1"
+  }
+}
