@@ -10,7 +10,12 @@
   "author": "idris-maps",
   "license": "GPLv2",
   "bin": {
-    "bar": "dist/bar.js"
+    "area": "dist/bar.js",
+    "bar": "dist/bar.js",
+    "line": "dist/line.js",
+    "multiline": "dist/line.js",
+    "pie": "dist/pie.js",
+    "scatter": "dist/scatter.js"
   },
   "directories": {
     "dist": "dist"
@@ -19,8 +24,14 @@
     "dist/**/*"
   ],
   "scripts": {
+    "bin:area": "sed -i '1i #!/usr/bin/env node' dist/area.js && chmod -x dist/area.js",
     "bin:bar": "sed -i '1i #!/usr/bin/env node' dist/bar.js && chmod -x dist/bar.js",
-    "build": "tsc && npm run bin:bar"
+    "bin:line": "sed -i '1i #!/usr/bin/env node' dist/line.js && chmod -x dist/line.js",
+    "bin:multiline": "sed -i '1i #!/usr/bin/env node' dist/multiline.js && chmod -x dist/multiline.js",
+    "bin:pie": "sed -i '1i #!/usr/bin/env node' dist/pie.js && chmod -x dist/pie.js",
+    "bin:scatter": "sed -i '1i #!/usr/bin/env node' dist/scatter.js && chmod -x dist/scatter.js",
+    "bin": "npm run bin:area && npm run bin:bar && npm run bin:line && npm run bin:multiline && npm run bin:pie && npm run bin:scatter",
+    "build": "tsc && npm run bin"
   },
   "repository": {
     "type": "git",
