@@ -88,19 +88,19 @@ optional arguments:
 
 ## `bar`
 
-`-l/--label` Label key (defaults to "label")
-`-v/--value` Value key (defaults to "value")
-`-W/--width` Chart width (defaults to "400")
-`-H/--height` Chart height (defaults to "200")
-`-n/--ndjson` Takes a NDJSON stream (defaults to JSON)
+* `-l/--label` Label key (defaults to "label")
+* `-v/--value` Value key (defaults to "value")
+* `-W/--width` Chart width (defaults to "400")
+* `-H/--height` Chart height (defaults to "200")
+* `-n/--ndjson` Takes a NDJSON stream (defaults to JSON)
 
 ## `scatter`
 
-`-x` X axis key (defaults to "x")
-`-y` Y axis key (defaults to "y")
-`-W/--width` Chart width (defaults to "400")
-`-H/--height` Chart height (defaults to "400")
-`-n/--ndjson` Takes a NDJSON stream (defaults to JSON)
+* `-x` X axis key (defaults to "x")
+* `-y` Y axis key (defaults to "y")
+* `-W/--width` Chart width (defaults to "400")
+* `-H/--height` Chart height (defaults to "400")
+* `-n/--ndjson` Takes a NDJSON stream (defaults to JSON)
 
 ## `line`
 
@@ -122,16 +122,16 @@ Arguments:
 
 ## `multiline`
 
-`-d/--date` Date key (defaults to "data")
-`-v/--values` Value keys (comma separated - required)
-`-W/--width` Chart width (defaults to "400")
-`-H/--height` Chart height (defaults to "200")
-`-n/--ndjson` Takes a NDJSON stream (defaults to JSON)
+* `-d/--date` Date key (defaults to "data")
+* `-v/--values` Value keys (comma separated - required)
+* `-W/--width` Chart width (defaults to "400")
+* `-H/--height` Chart height (defaults to "200")
+* `-n/--ndjson` Takes a NDJSON stream (defaults to JSON)
 
 ## `pie`
 
-`-l/--label` Label key (defaults to "label")
-`-v/--value` Value key (defaults to "value")
-`-W/--width` Chart width (defaults to "400")
-`-H/--height` Chart height (defaults to "200")
-`-n/--ndjson` Takes a NDJSON stream (defaults to JSON)
+* `-l/--label` Label key (defaults to "label")
+* `-v/--value` Value key (defaults to "value")
+* `-W/--width` Chart width (defaults to "400")
+* `-H/--height` Chart height (defaults to "200")
+* `-n/--ndjson` Takes a NDJSON stream (defaults to JSON)
