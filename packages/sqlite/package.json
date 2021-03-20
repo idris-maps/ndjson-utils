@@ -18,8 +18,7 @@
     "test:verbose": "ava --verbose"
   },
   "dependencies": {
-  },
-  "devDependencies": {
+    "sql.js": "^1.5.0"
   },
   "ava": {
     "extensions": [
@@ -36,5 +35,8 @@
   "homepage": "https://github.com/idris-maps/ndjson-utils/tree/master/packages/sqlite",
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@types/sql.js": "^1.4.2"
   }
 }
