@@ -4,20 +4,26 @@
   "description": "Stream ndjson to and from sqlite",
   "author": "idris-maps",
   "license": "GPLv2",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "bin": {
+    "to-sql": "dist/to-sql.js",
+    "from-sql": "dist/from-sql.js"
+  },
   "directories": {
     "dist": "dist"
   },
   "files": [
-    "dist"
+    "dist/**/*"
   ],
   "scripts": {
     "test": "ava",
-    "build": "tsc",
-    "test:verbose": "ava --verbose"
+    "test:verbose": "ava --verbose",
+    "bin:to-sql": "sed -i '1i #!/usr/bin/env node' dist/to-sql.js && chmod -x dist/to-sql.js",
+    "bin:from-sql": "sed -i '1i #!/usr/bin/env node' dist/from-sql.js && chmod -x dist/from-sql.js",
+    "build": "tsc && npm run bin:to-sql && npm run bin:from-sql"
   },
   "dependencies": {
+    "argparse": "^2.0.1",
+    "line-by-line": "^0.1.6",
     "sql.js": "^1.5.0"
   },
   "ava": {
@@ -37,6 +43,8 @@
     "access": "public"
   },
   "devDependencies": {
+    "@types/argparse": "^2.0.5",
+    "@types/line-by-line": "^0.1.4",
     "@types/sql.js": "^1.4.2"
   }
 }
