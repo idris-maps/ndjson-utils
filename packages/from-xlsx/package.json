@@ -1,6 +1,6 @@
 {
   "name": "@ndjson-utils/xlsx",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Stream ndjson from an excel file",
   "keywords": [
     "ndjson",
