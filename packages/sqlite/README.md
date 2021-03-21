@@ -44,7 +44,8 @@ node data | to-sql -t test -f db.sqlite
 
 Arguments:
 
-* `-q/--query` the SQL query (required)
+* `-q/--query` the SQL query (required if `-qf/--queryFile` is not defined)
+* `-qf/--queryFile` an `.sql` file with the query (required if `-q/--query` is not defined)
 * `-f/--file` the SQLite file (required)
 * `-n/--ndjson` return as ndjson stream (optional, returns a json array by default)
 
@@ -60,4 +61,16 @@ to an ndjson stream:
 
 ```bash
 from-sql -q "SELECT * FROM test" -f db.sqlite -n true
+```
+
+Or have a `query.sql` file as:
+
+```sql
+SELECT * FROM test
+```
+
+and run:
+
+```bash
+from-sql -qf query.sql -f db.sqlite -n true
 ```
