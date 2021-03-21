@@ -1,0 +1,40 @@
+{
+  "name": "@ndjson-utils/xlsx",
+  "version": "0.0.5",
+  "description": "Stream ndjson from an excel file",
+  "keywords": [
+    "ndjson",
+    "xlsx",
+    "cli"
+  ],
+  "author": "idris-maps",
+  "license": "GPLv2",
+  "bin": {
+    "from-xlsx": "dist/from-xlsx.js"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "bin:from-xlsx": "sed -i '1i #!/usr/bin/env node' dist/from-xlsx.js && chmod -x dist/from-xlsx.js",
+    "build": "tsc && npm run bin:from-xlsx"
+  },
+  "dependencies": {
+    "argparse": "^2.0.1",
+    "xlsx": "^0.16.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idris-maps/ndjson-utils.git"
+  },
+  "homepage": "https://github.com/idris-maps/ndjson-utils/tree/master/packages/from-xlsx",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/argparse": "^2.0.5"
+  }
+}

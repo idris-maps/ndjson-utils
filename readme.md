@@ -2,6 +2,10 @@
 
 Utilities to deal with `ndjson` files
 
+## [@ndjson-utils/sqlite](https://github.com/idris-maps/ndjson-utils/tree/master/packages/from-xlsx)
+
+Extract an excel sheet to `ndjson`
+
 ## [@ndjson-utils/sqlite](https://github.com/idris-maps/ndjson-utils/tree/master/packages/sqlite)
 
 Add/extract `ndjson` to/from `sqlite`
