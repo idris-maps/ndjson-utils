@@ -1,6 +1,6 @@
 {
   "name": "@ndjson-utils/vega-lite",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Create vega-lite spec from json/ndjson",
   "keywords": [
     "ndjson",
