@@ -273,7 +273,7 @@ If `data.json` is:
 
 ```json
 {
-  "result": [
+  "results": [
     {
       "sales": [
         { "amount": 2, "price": 14, "product": "A" },
@@ -287,7 +287,7 @@ If `data.json` is:
 ```
 
 ```bash
-npx split data.json result.0.sales
+npx split data.json results.0.sales
 ```
 
 returns:
