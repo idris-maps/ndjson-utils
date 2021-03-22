@@ -226,13 +226,77 @@ If `data.ndjson` is:
 ```
 
 ```
-data.ndjson | node dist/reduce '{...r, [d.product]: (r[d.product] || 0) + d.amount * d.price}' '{}'
+cat data.ndjson \
+  | node dist/reduce '{...r, [d.product]: (r[d.product] || 0) + d.amount * d.price}' '{}'
 ```
 
 returns:
 
 ```json
 {"A":34,"B":37}
+```
+
+## `split`
+
+Turn a JSON file in an NDJSON stream.
+
+Arguments:
+
+* first argument, the JSON file
+* second argument (optional) a dot separated path to the array to stream.
+
+If `data.json` is:
+
+```json
+[
+  { "amount": 2, "price": 14, "product": "A" },
+  { "amount": 1, "price": 16, "product": "B" },
+  { "amount": 1, "price": 6, "product": "A" },
+  { "amount": 3, "price": 7, "product": "B" },
+]
+```
+
+```bash
+npx split data.json
+```
+
+returns:
+
+```js
+{ "amount": 2, "price": 14, "product": "A" }
+{ "amount": 1, "price": 16, "product": "B" }
+{ "amount": 1, "price": 6, "product": "A" }
+{ "amount": 3, "price": 7, "product": "B" }
+```
+
+If `data.json` is:
+
+```json
+{
+  "result": [
+    {
+      "sales": [
+        { "amount": 2, "price": 14, "product": "A" },
+        { "amount": 1, "price": 16, "product": "B" },
+        { "amount": 1, "price": 6, "product": "A" },
+        { "amount": 3, "price": 7, "product": "B" },
+      ]
+    }
+  ]
+}
+```
+
+```bash
+npx split data.json result.0.sales
+```
+
+returns:
+
+```js
+{ "amount": 2, "price": 14, "product": "A" }
+{ "amount": 1, "price": 16, "product": "B" }
+{ "amount": 1, "price": 6, "product": "A" }
+{ "amount": 3, "price": 7, "product": "B" }
 ```
 
 ## `sum`
